@@ -81,10 +81,15 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "bank",
                 columns: new[] { "id", "api_settings", "description", "name" },
+                values: new object[] { 1, "{\"LatestRatesUrl\":\"http://api.exchangeratesapi.io/v1/latest?access_key=413d96c4d38020d4cbf67e45d5cca487\"}", "Bank A...", "Bank A" });
+
+            migrationBuilder.InsertData(
+                table: "currency",
+                columns: new[] { "id", "code", "description", "name" },
                 values: new object[,]
                 {
-                    { 1, "{\"BaseUrl\":\"https://api.exchangeratesapi.io/v1/\",\"LatestRatesUrl\":\"latest?access_key=413d96c4d38020d4cbf67e45d5cca487\"}", "Bank A...", "Bank A" },
-                    { 2, "{\"BaseUrl\":\"\"}", "Bank B...", "Bank B" }
+                    { 1, "USD", "Unites States Dollar", "Unites States Dollar" },
+                    { 2, "EUR", "Euro", "Euro" }
                 });
 
             migrationBuilder.CreateIndex(

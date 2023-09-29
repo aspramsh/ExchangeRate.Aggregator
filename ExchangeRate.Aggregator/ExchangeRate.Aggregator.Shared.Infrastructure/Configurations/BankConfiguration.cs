@@ -17,27 +17,16 @@ public class BankConfiguration : IEntityTypeConfiguration<Bank>
 
         builder.HasData(new List<Bank>
         {
-            new Bank
+            new()
             {
                 Id = 1,
                 Name = "Bank A",
                 Description = "Bank A...",
                 ApiSettings = JsonConvert.SerializeObject(new
                 {
-                    BaseUrl = "https://api.exchangeratesapi.io/v1/",
-                    LatestRatesUrl = "latest?access_key=413d96c4d38020d4cbf67e45d5cca487"
+                    LatestRatesUrl = "http://api.exchangeratesapi.io/v1/latest?access_key=413d96c4d38020d4cbf67e45d5cca487"
                 })
             },
-            new Bank
-            {
-                Id = 2,
-                Name = "Bank B",
-                Description = "Bank B...",
-                ApiSettings = JsonConvert.SerializeObject(new
-                {
-                    BaseUrl = "",
-                })
-            }
         });
     }
 }

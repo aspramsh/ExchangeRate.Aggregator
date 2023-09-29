@@ -57,16 +57,9 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            ApiSettings = "{\"BaseUrl\":\"https://api.exchangeratesapi.io/v1/\",\"LatestRatesUrl\":\"latest?access_key=413d96c4d38020d4cbf67e45d5cca487\"}",
+                            ApiSettings = "{\"LatestRatesUrl\":\"http://api.exchangeratesapi.io/v1/latest?access_key=413d96c4d38020d4cbf67e45d5cca487\"}",
                             Description = "Bank A...",
                             Name = "Bank A"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ApiSettings = "{\"BaseUrl\":\"\"}",
-                            Description = "Bank B...",
-                            Name = "Bank B"
                         });
                 });
 
@@ -105,6 +98,22 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
                         .HasDatabaseName("ix_currency_name");
 
                     b.ToTable("currency");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "USD",
+                            Description = "Unites States Dollar",
+                            Name = "Unites States Dollar"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "EUR",
+                            Description = "Euro",
+                            Name = "Euro"
+                        });
                 });
 
             modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Rate", b =>

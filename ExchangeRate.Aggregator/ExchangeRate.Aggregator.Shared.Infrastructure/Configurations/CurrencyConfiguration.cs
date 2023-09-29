@@ -15,5 +15,23 @@ public class CurrencyConfiguration : IEntityTypeConfiguration<Currency>
         builder.Property(x => x.Code).IsRequired();
 
         builder.HasIndex(x => x.Code).IsUnique();
+
+        builder.HasData(new List<Currency>
+        {
+            new()
+            {
+                Id = 1,
+                Code = "USD",
+                Name = "Unites States Dollar",
+                Description = "Unites States Dollar"
+            },
+            new()
+            {
+                Id = 2,
+                Code = "EUR",
+                Name = "Euro",
+                Description = "Euro"
+            }
+        });
     }
 }

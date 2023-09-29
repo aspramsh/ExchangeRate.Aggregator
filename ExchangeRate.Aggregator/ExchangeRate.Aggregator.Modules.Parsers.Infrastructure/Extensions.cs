@@ -1,7 +1,10 @@
 using System.Runtime.CompilerServices;
 using ExchangeRate.Aggregator.Modules.Parsers.Application.Repositories;
+using ExchangeRate.Aggregator.Modules.Parsers.Application.Services;
 using ExchangeRate.Aggregator.Modules.Parsers.Infrastructure.Repositories;
+using ExchangeRate.Aggregator.Modules.Parsers.Infrastructure.Services;
 using ExchangeRate.Aggregator.Shared.Infrastructure.DbContexts;
+using ExchangeRate.Aggregator.Shared.Infrastructure.Helpers;
 using ExchangeRate.Aggregator.Shared.Infrastructure.Postgres;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -17,6 +20,7 @@ internal static class Extensions
     {
         services.AddDatabase(configuration);
         services.AddRepositories();
+        services.AddServices();
         
         return services;
     }
@@ -25,7 +29,11 @@ internal static class Extensions
         this IServiceCollection services)
     {
         services.AddScoped<IBankRepository, BankRepository>();
-
+        
+        services.AddScoped<ICurrencyRepository, CurrencyRepository>();
+        
+        services.AddScoped<IRateRepository, RateRepository>();
+        
         return services;
     }
     
@@ -40,10 +48,16 @@ internal static class Extensions
         
         return services;
     }
-    
-    public static IServiceCollection AddServices(
+
+    private static IServiceCollection AddServices(
         this IServiceCollection services)
     {
+        services.AddScoped<IRateService, BankARateService>();
+        
+        services.AddScoped<IRateContext, RateContext>();
+
+        services.AddHttpClient(HttpClientConstants.ParserClient);
+        
         return services;
     }
 }
