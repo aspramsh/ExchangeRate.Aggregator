@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Bootstrapper", "ExchangeRate.Aggregator.Bootstrapper\ExchangeRate.Aggregator.Bootstrapper.csproj", "{E6C7C884-714B-481B-AC29-377B03B74DC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00. Docs", "00. Docs", "{42646A06-BB08-4EEF-A917-13D55D964B2F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Bootstrapper", "01. Bootstrapper", "{627FFD29-D82F-44CF-83E5-644ED2ED37D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Modules", "02. Modules", "{7BE9720C-743B-41E9-BEEE-32A512DEC18C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Shared", "03. Shared", "{976C0F32-140B-43A5-99AC-17E642A63FA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Shared.Abstractions", "ExchangeRate.Aggregator.Shared.Abstractions\ExchangeRate.Aggregator.Shared.Abstractions.csproj", "{D4F30C87-1B89-429E-85FB-D68C21FF7EC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Shared.Infrastructure", "ExchangeRate.Aggregator.Shared.Infrastructure\ExchangeRate.Aggregator.Shared.Infrastructure.csproj", "{24907A13-9E18-46BC-BD7C-044DFEB972B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parsers", "Parsers", "{740CDC62-80BE-4D0A-A408-4D18CD974801}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aggregators", "Aggregators", "{A768674C-32DF-4E49-9A8C-4B5B5B2DB475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Modules.Parsers", "ExchangeRate.Aggregator.Modules.Parsers\ExchangeRate.Aggregator.Modules.Parsers.csproj", "{CC282EE4-9539-44F2-A38B-1549BDFBF148}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Modules.Parsers.Infrastructure", "ExchangeRate.Aggregator.Modules.Parsers.Infrastructure\ExchangeRate.Aggregator.Modules.Parsers.Infrastructure.csproj", "{0E6D454C-9996-45FC-8461-E4CF24FC4A1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Modules.Parsers.Application", "ExchangeRate.Aggregator.Modules.Parsers.Application\ExchangeRate.Aggregator.Modules.Parsers.Application.csproj", "{F82B679B-A856-4318-AF04-F23A000EC1A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6C7C884-714B-481B-AC29-377B03B74DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C7C884-714B-481B-AC29-377B03B74DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C7C884-714B-481B-AC29-377B03B74DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C7C884-714B-481B-AC29-377B03B74DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F30C87-1B89-429E-85FB-D68C21FF7EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F30C87-1B89-429E-85FB-D68C21FF7EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F30C87-1B89-429E-85FB-D68C21FF7EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F30C87-1B89-429E-85FB-D68C21FF7EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24907A13-9E18-46BC-BD7C-044DFEB972B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24907A13-9E18-46BC-BD7C-044DFEB972B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24907A13-9E18-46BC-BD7C-044DFEB972B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24907A13-9E18-46BC-BD7C-044DFEB972B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC282EE4-9539-44F2-A38B-1549BDFBF148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC282EE4-9539-44F2-A38B-1549BDFBF148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC282EE4-9539-44F2-A38B-1549BDFBF148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC282EE4-9539-44F2-A38B-1549BDFBF148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E6D454C-9996-45FC-8461-E4CF24FC4A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E6D454C-9996-45FC-8461-E4CF24FC4A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E6D454C-9996-45FC-8461-E4CF24FC4A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E6D454C-9996-45FC-8461-E4CF24FC4A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82B679B-A856-4318-AF04-F23A000EC1A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82B679B-A856-4318-AF04-F23A000EC1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82B679B-A856-4318-AF04-F23A000EC1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82B679B-A856-4318-AF04-F23A000EC1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6C7C884-714B-481B-AC29-377B03B74DC8} = {627FFD29-D82F-44CF-83E5-644ED2ED37D9}
+		{D4F30C87-1B89-429E-85FB-D68C21FF7EC1} = {976C0F32-140B-43A5-99AC-17E642A63FA9}
+		{24907A13-9E18-46BC-BD7C-044DFEB972B8} = {976C0F32-140B-43A5-99AC-17E642A63FA9}
+		{740CDC62-80BE-4D0A-A408-4D18CD974801} = {7BE9720C-743B-41E9-BEEE-32A512DEC18C}
+		{A768674C-32DF-4E49-9A8C-4B5B5B2DB475} = {7BE9720C-743B-41E9-BEEE-32A512DEC18C}
+		{CC282EE4-9539-44F2-A38B-1549BDFBF148} = {740CDC62-80BE-4D0A-A408-4D18CD974801}
+		{0E6D454C-9996-45FC-8461-E4CF24FC4A1B} = {740CDC62-80BE-4D0A-A408-4D18CD974801}
+		{F82B679B-A856-4318-AF04-F23A000EC1A7} = {740CDC62-80BE-4D0A-A408-4D18CD974801}
+	EndGlobalSection
+EndGlobal
