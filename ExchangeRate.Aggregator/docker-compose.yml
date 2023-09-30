@@ -1,0 +1,12 @@
+﻿services:
+  exchangerate.aggregator.bootstrapper:
+    image: exchangerate.aggregator.bootstrapper
+    build:
+      context: .
+      dockerfile: ExchangeRate.Aggregator.Bootstrapper/Dockerfile
+
+  exchangerate.aggregator.modules.parsers:
+    image: exchangerate.aggregator.modules.parsers
+    build:
+      context: .
+      dockerfile: ExchangeRate.Aggregator.Modules.Parsers/Dockerfile

@@ -33,6 +33,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Modules.Rates.Infrastructure", "ExchangeRate.Aggregator.Modules.Rates.Infrastructure\ExchangeRate.Aggregator.Modules.Rates.Infrastructure.csproj", "{C5CDCDDC-67DA-4137-B17A-4DCBA49F9388}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38AD37AA-FA49-404F-806D-EEEAADC28C4E}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
