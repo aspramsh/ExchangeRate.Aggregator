@@ -5,9 +5,10 @@ https://github.com/devmentors/Inflow/tree/master/src
 
 Future improvements:
 1. Fluent validation
-2. Lookup APIs
-3. Separate DB for parser and data synchronization.
-4. Unit tests
+2. Add postgreSQL connection to docker-compose (the container creation is finished but it can't connect to database)
+3. Lookup APIs
+4. Separate DB for parser and data synchronization.
+5. Unit tests
 
 
 Run the following projects:
