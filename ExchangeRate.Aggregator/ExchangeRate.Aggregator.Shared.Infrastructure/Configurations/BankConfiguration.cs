@@ -1,4 +1,4 @@
-using ExchangeRate.Aggregator.Shared.Infrastructure.Entities;
+using ExchangeRate.Aggregator.Shared.Abstractions.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Newtonsoft.Json;

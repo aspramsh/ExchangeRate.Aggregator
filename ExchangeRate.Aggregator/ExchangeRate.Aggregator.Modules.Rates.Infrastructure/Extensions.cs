@@ -1,43 +1,40 @@
-using System.Runtime.CompilerServices;
-using ExchangeRate.Aggregator.Modules.Parsers.Application.Services;
-using ExchangeRate.Aggregator.Modules.Parsers.Infrastructure.Services;
+using System.Reflection;
 using ExchangeRate.Aggregator.Shared.Abstractions.Repositories;
 using ExchangeRate.Aggregator.Shared.Infrastructure.DbContexts;
-using ExchangeRate.Aggregator.Shared.Infrastructure.Helpers;
 using ExchangeRate.Aggregator.Shared.Infrastructure.Postgres;
 using ExchangeRate.Aggregator.Shared.Infrastructure.Repositories;
+using Mapster;
+using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: InternalsVisibleTo("ExchangeRate.Aggregator.Modules.Parsers")]
+namespace ExchangeRate.Aggregator.Modules.Rates.Infrastructure;
 
-namespace ExchangeRate.Aggregator.Modules.Parsers.Infrastructure;
-
-internal static class Extensions
+public static class Extensions
 {
-    public static IServiceCollection AddParsersInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddAggregatorsInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddMappings();
+        
         services.AddDatabase(configuration);
+
         services.AddRepositories();
-        services.AddServices();
         
         return services;
     }
 
-    private static IServiceCollection AddRepositories(
+    public static IServiceCollection AddRepositories(
         this IServiceCollection services)
     {
         services.AddScoped<IBankRepository, BankRepository>();
-        
         services.AddScoped<ICurrencyRepository, CurrencyRepository>();
-        
         services.AddScoped<IRateRepository, RateRepository>();
-        
+
         return services;
     }
     
-    private static IServiceCollection AddDatabase(
+    public static IServiceCollection AddDatabase(
         this IServiceCollection services,
         IConfiguration configuration)
     {
@@ -48,16 +45,13 @@ internal static class Extensions
         
         return services;
     }
-
-    private static IServiceCollection AddServices(
-        this IServiceCollection services)
+    
+    private static void AddMappings(this IServiceCollection services)
     {
-        services.AddScoped<IRateService, BankARateService>();
-        
-        services.AddScoped<IRateContext, RateContext>();
+        var config = TypeAdapterConfig.GlobalSettings;
+        config.Scan(Assembly.GetExecutingAssembly());
 
-        services.AddHttpClient(HttpClientConstants.ParserClient);
-        
-        return services;
+        services.AddSingleton(config);
+        services.AddScoped<IMapper, ServiceMapper>();
     }
 }

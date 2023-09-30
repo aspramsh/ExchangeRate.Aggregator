@@ -1,4 +1,4 @@
-namespace ExchangeRate.Aggregator.Shared.Infrastructure.Entities;
+namespace ExchangeRate.Aggregator.Shared.Abstractions.Entities;
 
 public class Currency
 {

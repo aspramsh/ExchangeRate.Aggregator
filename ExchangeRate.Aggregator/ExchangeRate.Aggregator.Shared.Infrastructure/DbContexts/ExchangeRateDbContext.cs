@@ -1,5 +1,5 @@
+using ExchangeRate.Aggregator.Shared.Abstractions.Entities;
 using ExchangeRate.Aggregator.Shared.Infrastructure.Configurations;
-using ExchangeRate.Aggregator.Shared.Infrastructure.Entities;
 using ExchangeRate.Aggregator.Shared.Infrastructure.Postgres;
 using Microsoft.EntityFrameworkCore;
 

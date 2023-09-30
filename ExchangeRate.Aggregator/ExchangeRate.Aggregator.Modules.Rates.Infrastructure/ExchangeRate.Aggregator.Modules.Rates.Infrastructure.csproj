@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <RootNamespace>ExchangeRate.Aggregator.Modules.Rates.Infrastructure</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ExchangeRate.Aggregator.Modules.Rates.Application\ExchangeRate.Aggregator.Modules.Rates.Application.csproj" />
+      <ProjectReference Include="..\ExchangeRate.Aggregator.Modules.Parsers.Infrastructure\ExchangeRate.Aggregator.Modules.Parsers.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

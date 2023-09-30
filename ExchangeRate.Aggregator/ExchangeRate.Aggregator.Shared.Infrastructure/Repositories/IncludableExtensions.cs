@@ -1,4 +1,5 @@
 ﻿using System.Linq.Expressions;
+using ExchangeRate.Aggregator.Shared.Abstractions.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExchangeRate.Aggregator.Shared.Infrastructure.Repositories

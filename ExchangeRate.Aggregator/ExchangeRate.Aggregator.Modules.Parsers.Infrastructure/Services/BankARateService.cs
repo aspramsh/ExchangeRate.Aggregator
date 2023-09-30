@@ -1,7 +1,7 @@
-using ExchangeRate.Aggregator.Modules.Parsers.Application.Repositories;
 using ExchangeRate.Aggregator.Modules.Parsers.Application.Services;
 using ExchangeRate.Aggregator.Modules.Parsers.Infrastructure.Models;
-using ExchangeRate.Aggregator.Shared.Infrastructure.Entities;
+using ExchangeRate.Aggregator.Shared.Abstractions.Entities;
+using ExchangeRate.Aggregator.Shared.Abstractions.Repositories;
 using ExchangeRate.Aggregator.Shared.Infrastructure.Helpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -76,6 +76,7 @@ public class BankARateService : IRateService
                 BaseCurrencyId = existingBase.Id,
                 CurrencyId = currencies.FirstOrDefault(x => x.Code == r.Key)?.Id ?? 0,
                 DateTime = DateTimeOffset.FromUnixTimeSeconds(responseObj.Timestamp),
+                Value = r.Value,
             });
 
             await _rateRepository.InsertRangeAsync(result.ToList(), cancellationToken);

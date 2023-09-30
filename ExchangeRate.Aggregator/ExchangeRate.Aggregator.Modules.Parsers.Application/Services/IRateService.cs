@@ -1,4 +1,4 @@
-using ExchangeRate.Aggregator.Shared.Infrastructure.Entities;
+using ExchangeRate.Aggregator.Shared.Abstractions.Entities;
 
 namespace ExchangeRate.Aggregator.Modules.Parsers.Application.Services;
 

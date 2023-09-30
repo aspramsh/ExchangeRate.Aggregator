@@ -3,7 +3,7 @@ using ExchangeRate.Aggregator.Shared.Abstractions.Modules;
 using ExchangeRate.Aggregator.Shared.Infrastructure;
 using ExchangeRate.Aggregator.Shared.Infrastructure.Modules;
 
-namespace ExchangeRate.Aggregator;
+namespace ExchangeRate.Aggregator.Bootstrapper;
 
 public class Startup
 {
@@ -14,7 +14,7 @@ public class Startup
     public Startup(IConfiguration configuration)
     {
         Configuration = configuration;
-        _assemblies = ModuleLoader.LoadAssemblies(configuration, "HighWay.Aggregator.Modules.");
+        _assemblies = ModuleLoader.LoadAssemblies(configuration, "ExchangeRate.Aggregator.Modules.");
         _modules = ModuleLoader.LoadModules(_assemblies);
     }
     

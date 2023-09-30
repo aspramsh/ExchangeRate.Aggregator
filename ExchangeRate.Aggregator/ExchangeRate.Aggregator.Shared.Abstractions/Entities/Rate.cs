@@ -1,10 +1,12 @@
-namespace ExchangeRate.Aggregator.Shared.Infrastructure.Entities;
+namespace ExchangeRate.Aggregator.Shared.Abstractions.Entities;
 
 public class Rate
 {
     public long Id { get; set; }
 
     public DateTimeOffset DateTime { get; set; }
+
+    public decimal Value { get; set; }
 
     public int BaseCurrencyId { get; set; }
 

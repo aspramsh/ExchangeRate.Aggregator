@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Query;
+﻿using ExchangeRate.Aggregator.Shared.Abstractions.Repositories;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace ExchangeRate.Aggregator.Shared.Infrastructure.Repositories
 {

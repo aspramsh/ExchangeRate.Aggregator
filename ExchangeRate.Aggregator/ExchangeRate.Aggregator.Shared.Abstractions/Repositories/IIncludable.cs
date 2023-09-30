@@ -1,4 +1,4 @@
-﻿namespace ExchangeRate.Aggregator.Shared.Infrastructure.Repositories
+﻿namespace ExchangeRate.Aggregator.Shared.Abstractions.Repositories
 {
     /// <summary>
     /// Table interface to be included

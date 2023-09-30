@@ -51,6 +51,7 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
                     id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     date_time = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
+                    value = table.Column<decimal>(type: "numeric", nullable: false),
                     base_currency_id = table.Column<int>(type: "integer", nullable: false),
                     currency_id = table.Column<int>(type: "integer", nullable: false),
                     bank_id = table.Column<int>(type: "integer", nullable: false)

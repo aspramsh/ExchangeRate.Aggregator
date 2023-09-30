@@ -1,0 +1,8 @@
+{
+  "rates": {
+    "module": {
+      "name": "Rates",
+      "enabled": true
+    }
+  }
+}

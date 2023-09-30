@@ -1,6 +1,6 @@
-namespace ExchangeRate.Aggregator.Shared.Infrastructure.Entities;
+namespace ExchangeRate.Aggregator.Modules.Rates.Application.Handlers.ResponseModels;
 
-public class Bank
+public class BankResponse
 {
     public int Id { get; set; }
 
@@ -9,6 +9,4 @@ public class Bank
     public string Description { get; set; }
 
     public string ApiSettings { get; set; }
-    
-    public ICollection<Rate> Rates { get; set; }
 }

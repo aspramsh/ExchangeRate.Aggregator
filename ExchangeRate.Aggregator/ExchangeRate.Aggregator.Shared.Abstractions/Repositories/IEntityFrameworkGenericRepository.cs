@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace ExchangeRate.Aggregator.Shared.Infrastructure.Repositories
+namespace ExchangeRate.Aggregator.Shared.Abstractions.Repositories
 {
     public interface IEntityFrameworkGenericRepository<TEntity>
         where TEntity : class

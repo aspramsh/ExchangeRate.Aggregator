@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
 {
     [DbContext(typeof(ExchangeRateDbContext))]
-    [Migration("20230929224741_Initial")]
+    [Migration("20230929232625_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Bank", b =>
+            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Abstractions.Entities.Bank", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -66,7 +66,7 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Currency", b =>
+            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Abstractions.Entities.Currency", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -119,7 +119,7 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Rate", b =>
+            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Abstractions.Entities.Rate", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -144,6 +144,10 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("date_time");
 
+                    b.Property<decimal>("Value")
+                        .HasColumnType("numeric")
+                        .HasColumnName("value");
+
                     b.HasKey("Id")
                         .HasName("pk_rate");
 
@@ -163,23 +167,23 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
                     b.ToTable("rate");
                 });
 
-            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Rate", b =>
+            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Abstractions.Entities.Rate", b =>
                 {
-                    b.HasOne("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Bank", "Bank")
+                    b.HasOne("ExchangeRate.Aggregator.Shared.Abstractions.Entities.Bank", "Bank")
                         .WithMany("Rates")
                         .HasForeignKey("BankId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_rate_bank_bank_id");
 
-                    b.HasOne("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Currency", "BaseCurrency")
+                    b.HasOne("ExchangeRate.Aggregator.Shared.Abstractions.Entities.Currency", "BaseCurrency")
                         .WithMany("BaseRates")
                         .HasForeignKey("BaseCurrencyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_rate_currency_base_currency_id");
 
-                    b.HasOne("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Currency", "Currency")
+                    b.HasOne("ExchangeRate.Aggregator.Shared.Abstractions.Entities.Currency", "Currency")
                         .WithMany("Rates")
                         .HasForeignKey("CurrencyId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -193,12 +197,12 @@ namespace ExchangeRate.Aggregator.Shared.Infrastructure.Migrations
                     b.Navigation("Currency");
                 });
 
-            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Bank", b =>
+            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Abstractions.Entities.Bank", b =>
                 {
                     b.Navigation("Rates");
                 });
 
-            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Infrastructure.Entities.Currency", b =>
+            modelBuilder.Entity("ExchangeRate.Aggregator.Shared.Abstractions.Entities.Currency", b =>
                 {
                     b.Navigation("BaseRates");
 

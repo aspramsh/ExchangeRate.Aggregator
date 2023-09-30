@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using System.Linq.Dynamic.Core;
+using ExchangeRate.Aggregator.Shared.Abstractions.Repositories;
 using LinqKit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

@@ -27,6 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Modules.Parsers.Application", "ExchangeRate.Aggregator.Modules.Parsers.Application\ExchangeRate.Aggregator.Modules.Parsers.Application.csproj", "{F82B679B-A856-4318-AF04-F23A000EC1A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Modules.Rates.Api", "ExchangeRate.Aggregator.Modules.Rates.Api\ExchangeRate.Aggregator.Modules.Rates.Api.csproj", "{17F2A520-C642-4006-BDC7-EBAF61C36C16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Modules.Rates.Application", "ExchangeRate.Aggregator.Modules.Rates.Application\ExchangeRate.Aggregator.Modules.Rates.Application.csproj", "{3346FA33-6391-4B65-890F-5C28ACF768D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate.Aggregator.Modules.Rates.Infrastructure", "ExchangeRate.Aggregator.Modules.Rates.Infrastructure\ExchangeRate.Aggregator.Modules.Rates.Infrastructure.csproj", "{C5CDCDDC-67DA-4137-B17A-4DCBA49F9388}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +63,18 @@ Global
 		{F82B679B-A856-4318-AF04-F23A000EC1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F82B679B-A856-4318-AF04-F23A000EC1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F82B679B-A856-4318-AF04-F23A000EC1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17F2A520-C642-4006-BDC7-EBAF61C36C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F2A520-C642-4006-BDC7-EBAF61C36C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F2A520-C642-4006-BDC7-EBAF61C36C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F2A520-C642-4006-BDC7-EBAF61C36C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3346FA33-6391-4B65-890F-5C28ACF768D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3346FA33-6391-4B65-890F-5C28ACF768D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3346FA33-6391-4B65-890F-5C28ACF768D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3346FA33-6391-4B65-890F-5C28ACF768D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5CDCDDC-67DA-4137-B17A-4DCBA49F9388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CDCDDC-67DA-4137-B17A-4DCBA49F9388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CDCDDC-67DA-4137-B17A-4DCBA49F9388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CDCDDC-67DA-4137-B17A-4DCBA49F9388}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E6C7C884-714B-481B-AC29-377B03B74DC8} = {627FFD29-D82F-44CF-83E5-644ED2ED37D9}
@@ -67,5 +85,8 @@ Global
 		{CC282EE4-9539-44F2-A38B-1549BDFBF148} = {740CDC62-80BE-4D0A-A408-4D18CD974801}
 		{0E6D454C-9996-45FC-8461-E4CF24FC4A1B} = {740CDC62-80BE-4D0A-A408-4D18CD974801}
 		{F82B679B-A856-4318-AF04-F23A000EC1A7} = {740CDC62-80BE-4D0A-A408-4D18CD974801}
+		{17F2A520-C642-4006-BDC7-EBAF61C36C16} = {A768674C-32DF-4E49-9A8C-4B5B5B2DB475}
+		{3346FA33-6391-4B65-890F-5C28ACF768D0} = {A768674C-32DF-4E49-9A8C-4B5B5B2DB475}
+		{C5CDCDDC-67DA-4137-B17A-4DCBA49F9388} = {A768674C-32DF-4E49-9A8C-4B5B5B2DB475}
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,4 @@
-﻿namespace ExchangeRate.Aggregator.Shared.Infrastructure.Repositories
+﻿namespace ExchangeRate.Aggregator.Shared.Abstractions.Repositories
 {
     public abstract class BasePagedResult<T>
         where T : class
